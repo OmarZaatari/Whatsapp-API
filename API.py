@@ -1,19 +1,22 @@
 import requests
 import json
+import time
 
-url = 'https://graph.facebook.com/v20.0/SENDER-ID/messages' 
-headers = {'Authorization' : 'Bearer API-KEY',
-           'Content-Type': 'application/json'} 
-data = {
-    "messaging_product": "whatsapp",
-    "to": "PHONE-NUMBER",
-    "type": "text",
-    "text": {
-        'body' : "DRINK WATER!"
-        }
-    }
+while True:
+  url = 'https://graph.facebook.com/v20.0/###/messages' 
+  headers = {'Authorization' : 'Bearer ###',
+             'Content-Type': 'application/json'} 
+  data = {
+      "messaging_product": "whatsapp",
+      "to": "###",
+      "type": "text",
+      "text": {
+          'body' : "Omar Zaatari API TESTING ma ten2az please zbate"
+          }
+      }
 
-response = requests.post(url, headers=headers, json=data) 
-print(response.status_code)
+  response = requests.post(url, headers=headers, json=data) 
+  print(response.status_code)
 
-print(response.text)
+  print(response.text)
+  time.sleep(3600)
