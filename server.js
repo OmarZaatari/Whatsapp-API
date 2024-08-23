@@ -7,6 +7,8 @@
 
 import express from "express";
 import axios from "axios";
+import fs from "fs";
+import path from "path";
 
 const app = express();
 app.use(express.json());
@@ -26,6 +28,11 @@ app.post("/webhook", async (req, res) => {
     // extract the business number to send the reply from it
     const business_phone_number_id =
       req.body.entry?.[0].changes?.[0].value?.metadata?.phone_number_id;
+    fs.writeFile('output.txt', message.text.body, (err) => {
+    if (err) {
+      console.error('Error writing to file:', err);
+    }
+  });
 
     // send a reply message as per the docs here https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages
     await axios({
@@ -37,7 +44,7 @@ app.post("/webhook", async (req, res) => {
       data: {
         messaging_product: "whatsapp",
         to: message.from,
-        text: { body: "Echo: " + message.text.body },
+        text: { body: "Echo: " + message.text.body.charAt(0) },
         context: {
           message_id: message.id, // shows the message as a reply to the original user message
         },

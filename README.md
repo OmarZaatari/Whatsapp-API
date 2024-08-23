@@ -1,14 +1,9 @@
-# WhatsApp Platform Quick Start
+# Whatsapp Water Reminder Bot
 
-Welcome to your first step toward building awesome WhatsApp apps!
-
-This project contains the code for a simple webhook you can use to get started using the WhatsApp Platform.
-
-The code here mirrors what is in our [webhook set up guide](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks), and may be used as the starting point for doing the ["Get Started With the WhatsApp Business Cloud API guide"](https://developers.facebook.com/docs/whatsapp/getting-started/signing-up/).
-
-## Additional Resources
-
-Interested in learning more about the WhatsApp Platform?
+This is a personal project that I started to learn about APIs and how to work with them.
+## Resources
+I used Meta's guide for using Whatsapp Business to get this up and running.
+The glitch app is a remix of Whatsapp's template glitch application for deploying **Webhooks**.
 
 Check out these resources:
 
@@ -17,7 +12,6 @@ Check out these resources:
 - [**Quick start tutorial**](https://developers.facebook.com/docs/whatsapp/getting-started/signing-up/): Build your first app by remixing this project and following our quick start tutorial.
 
 - [**WhatsApp Business Platform Documentation**](https://developers.facebook.com/docs/whatsapp/)
-
 
 ## Environment Setup
 
